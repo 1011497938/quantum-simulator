@@ -2,7 +2,6 @@ from circuit import Circuit, CNOT, U3
 import time
 from numpy import pi
 import numpy as np
-from simulator import simulate
 
 qubit_numer = 5
 qc = Circuit(qubit_numer)
@@ -10,7 +9,7 @@ qc = Circuit(qubit_numer)
 # qc.addGate(U3(0, 0, pi, 0))
 # qc.addGate(U3(1, 0, pi, 0))
 # qc.addGate(U3(2, 0, 0, pi))
-qc.random(100)
+qc.random(20)
 
 # init_state = np.zeros(2**qubit_numer)
 # init_state[0] = 1
@@ -30,4 +29,5 @@ print(np.allclose(mat, qc_matrix))
 print(np.round(qc_matrix))
 print()
 print(np.round(mat))
-temp = 0
+
+pass
